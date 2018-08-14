@@ -34,8 +34,7 @@ function output() {
             $line .= '<td>' . $row['password'] . '</td>';
             $html .= $line . '</tr>'; // $htmlに1行分追加
         }
-        echo $html . '<br/>';
-        $html .= '<table>' .$html. '</table>';
+        // $html .= '<table>' .$html. '</table>';
 
         echo 'output<br/>';
         echo $html;
