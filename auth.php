@@ -41,6 +41,8 @@ try {
     }
     $html .= '<table>' .$html. '</table>';
 
+    echo $html;
+
     /*** Disconnect ***/
     $dbh = null;
 } catch (PDOException $e) {
