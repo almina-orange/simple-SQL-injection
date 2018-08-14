@@ -18,3 +18,4 @@ test for simple SQL injection
 ## Reference
 - Heroku + PHP から Heroku Postgres に接続する - Qiita, [https://qiita.com/shin1x1/items/68732dcf02a93c0a0fbb](https://qiita.com/shin1x1/items/68732dcf02a93c0a0fbb)
 - PDOを使ったPHPでのデータベース基本操作 - Qiita, [https://qiita.com/mitsuru793/items/45b2452284e321c7a5a9](https://qiita.com/mitsuru793/items/45b2452284e321c7a5a9)
+- Heroku上のDBにPHPからアクセス - Taka-Coma's Blog, [http://taka-coma.hateblo.jp/entry/2017/08/03/021655](http://taka-coma.hateblo.jp/entry/2017/08/03/021655)
