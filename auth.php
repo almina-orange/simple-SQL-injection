@@ -27,12 +27,7 @@ function output() {
         // }
         $html = '';
         foreach($dbh->query($sql) as $row) {
-            print_r($row);
-            print('<br/>');
-            echo $row['id'] . '<br/>';
-            echo $row['name'] . '<br/>';
-            echo $row['age'] . '<br/>';
-            echo $row['password'] . '<br/>';
+            $line = '';
             $line = '<tr>';
             $line .= '<td>' . $row['id'] . '</td>';
             $line .= '<td>' . $row['name'] . '</td>';
@@ -43,9 +38,7 @@ function output() {
         $html .= '<table>' .$html. '</table>';
 
         echo 'output:<br/>';
-
         echo $html;
-        var_dump($html);
 
         /*** Disconnect ***/
         $dbh = null;
