@@ -1,3 +1,39 @@
+<!-- output.html -->
+<html lang='en'>
+
+<head>
+    <title>output.html</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: solid 1px;
+            padding: 0.5em;
+        }
+    </style>
+</haed>
+
+<body>
+    <h3>Search result</h3>
+    <div class="form" style="margin: 5px">
+        <table>
+            <tr>
+                <td>りんご</td>
+                <td>甘酸っぱい</td>
+                <td>おおむね赤</td>
+            </tr>
+            <tr>
+                <td>なつみかん</td>
+                <td>かなり酸っぱいと思う</td>
+                <td>たいてい黄色</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
+
 <?php
 /*
 Program:
