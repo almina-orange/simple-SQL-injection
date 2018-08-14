@@ -12,3 +12,9 @@ test for simple SQL injection
 | 2 | 佐藤隆 | 36 | sato |
 | 3 | 斎藤達弘 | 46 | saito |
 | 4 | 桜井さつき | 22 | sakurai |
+
+------
+
+## Reference
+- Heroku + PHP から Heroku Postgres に接続する - Qiita, [https://qiita.com/shin1x1/items/68732dcf02a93c0a0fbb](https://qiita.com/shin1x1/items/68732dcf02a93c0a0fbb)
+- PDOを使ったPHPでのデータベース基本操作 - Qiita, [https://qiita.com/mitsuru793/items/45b2452284e321c7a5a9](https://qiita.com/mitsuru793/items/45b2452284e321c7a5a9)
