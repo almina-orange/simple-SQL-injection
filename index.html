@@ -8,16 +8,28 @@
 <body>
     <h3>Login Form</h3>
     <div class="content" style="margin: 5px">
+        Welcome to Login form!
         Please input your ID and Password.
         And click "Submit" button.
     </div>
     
+    <!--
     <div class="form" style="margin: 5px">
         <form action="auth.php" method="post">
             User ID:
             <input type="text" name="user_id" pattern="^[0-9A-Za-z]+$" size=20>
             Password:
             <input type="password" name="user_password" pattern="^[0-9A-Za-z]+$" size=20>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    -->
+    <div class="form" style="margin: 5px">
+        <form action="auth.php" method="post">
+            User ID:
+            <input type="text" name="user_id" size=20>
+            Password:
+            <input type="password" name="user_password" size=20>
             <input type="submit" value="Submit">
         </form>
     </div>
