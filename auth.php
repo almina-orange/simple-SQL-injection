@@ -4,39 +4,39 @@ Program:
     authentify with database.
 */
 
-$url = parse_url(getenv('DATABASE_URL'));
+/*** Connect by PHP Data Object (PDO) ***/
+$url = parse_url(getenv('DATABASE_URL'));  // using heroku env
 
-echo "> url parameters :\n";
-echo $url['host'], "\n";
-echo substr($url['path'], 1), "\n";
-echo $url['user'], "\n";
-echo $url['pass'], "\n";
+// try {
+//     $dbh = new PDO('mysql:host=localhost;dbname=test', $user, $pass);
+//     foreach($dbh->query('SELECT * from FOO') as $row) {
+//         print_r($row);
+//     }
+//     $dbh = null;
+// } catch (PDOException $e) {
+//     print "エラー!: " . $e->getMessage() . "<br/>";
+//     die();
+// }
 
-echo "> connection parameters :\n";
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
-echo $dsn, "\n";
-
-echo "> connecting :\n";
-$pdo = new PDO($dsn, $url['user'], $url['pass']);
+$dbh = new PDO($dsn, $url['user'], $url['pass']);  // connect using PDO
 var_dump($pdo->getAttribute(PDO::ATTR_SERVER_VERSION));
 
-// // connect
-// $link = pg_connect("host=localhost dbname=db user=usr password=pass");
-// if (!$link) {
-//     die('Connection failed.'.pg_last_error());
-// }
+/*** Process on database ***/
+$id = $_POST['user_id'];
+$passwd = $_POST['user_password'];
 
-// $id = $_POST['user_id'];
-// $passwd = $_POST['user_password'];
+// $sql = "SELECT * FROM sample WHERE id = '$id' AND password = '$passwd'";  // make query
+$sql = "SELECT * FROM sample";
+var_dump($sql);
 
-// // make query
-// // $sql = "SELECT COUNT(*) FROM Users WHERE id = '$id' AND password = '$passwd'";
-// $sql = "SELECT * FROM Users WHERE id = '$id' AND password = '$passwd'";
-// echo $sql;
+$stmt = $dbh->query($sql);
+var_dump($stmt);
 
-// // disconnect
-// pg_close($link);
-// if ($close_flag){
-//     print('Disconnection succeeded.<br>');
-// }
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+print($result['id']);
+print($result['name']);
+
+/*** Disconnect ***/
+$dbh = null;
 ?>
