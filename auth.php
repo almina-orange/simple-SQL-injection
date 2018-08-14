@@ -24,7 +24,6 @@ function output() {
         //     print($result['id']);
         // }
         $html = '';
-        echo $html . '<br/>';
         foreach($dbh->query($sql) as $row) {
             $line = '';
             $line = '<tr>';
@@ -34,7 +33,7 @@ function output() {
             $line .= '<td>' . $row['password'] . '</td>';
             $html .= $line . '</tr>'; // $htmlに1行分追加
         }
-        // $html .= '<table>' .$html. '</table>';
+        $html = '<table>' .$html. '</table>';
 
         echo 'output<br/>';
         echo $html;
