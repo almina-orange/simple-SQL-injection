@@ -5,7 +5,6 @@ Program:
 */
 
 function output() {
-    header('Content-type: text/html');
     try {
         /*** Connect by PHP Data Object (PDO) ***/
         $url = parse_url(getenv('DATABASE_URL'));  // using heroku env
@@ -18,12 +17,12 @@ function output() {
 
         $sql = "SELECT * FROM sample WHERE id = '$id' AND password = '$passwd'";  // make query
 
-        // output
+        /*** output ***/
         // $stmt = $dbh->query($sql);
         // while($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
         //     print($result['id']);
         // }
-        $html = '';
+        $html = '';  // html sentence
         foreach($dbh->query($sql) as $row) {
             $line = '';
             $line = '<tr>';
@@ -35,8 +34,7 @@ function output() {
         }
         $html = '<table>' .$html. '</table>';
 
-        echo 'output<br/>';
-        echo $html;
+        echo $html;  // output
 
         /*** Disconnect ***/
         $dbh = null;
@@ -65,7 +63,7 @@ function output() {
 
 <body>
     <h3>Search result</h3>
-    <div class="form" style="margin: 5px; padding: 5px; border: solid 1px">
+    <div class="form" style="margin: 5px; padding: 5px;">
         <?php output(); ?>
     </div>
 </body>
