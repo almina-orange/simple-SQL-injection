@@ -30,8 +30,8 @@ $passwd = $_POST['user_password'];
 $sql = "SELECT * FROM sample";
 var_dump($sql);
 
-$stmt = $dbh->query($sql);
-var_dump($stmt);
+// $stmt = $dbh->query($sql);
+// var_dump($stmt);
 
 // $result = $stmt->fetch(PDO::FETCH_ASSOC);
 // print($result['id']);
