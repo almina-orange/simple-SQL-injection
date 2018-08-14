@@ -1,29 +1,4 @@
 <!-- output.html -->
-<html lang='en'>
-
-<head>
-    <title>output.html</title>
-    <style>
-        table {
-            border-collapse: collapse;
-        }
-        td {
-            border: solid 1px;
-            padding: 0.5em;
-        }
-    </style>
-</haed>
-
-<body>
-    <h3>Search result</h3>
-    <div class="form" style="margin: 5px; border: solid 1px">
-        <?php
-        output();
-        ?>
-    </div>
-</body>
-
-</html>
 
 <?php
 /*
@@ -75,3 +50,29 @@ function output() {
     }
 }
 ?>
+
+<html lang='en'>
+
+<head>
+    <title>output.html</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: solid 1px;
+            padding: 0.5em;
+        }
+    </style>
+</haed>
+
+<body>
+    <h3>Search result</h3>
+    <div class="form" style="margin: 5px; border: solid 1px">
+        <?php
+        output();
+        ?>
+    </div>
+</body>
+
+</html>
