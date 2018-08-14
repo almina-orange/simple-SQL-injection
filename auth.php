@@ -1,5 +1,3 @@
-<!-- output.html -->
-
 <?php
 /*
 Program:
@@ -18,7 +16,6 @@ function output() {
         $passwd = $_POST['user_password'];
 
         $sql = "SELECT * FROM sample WHERE id = '$id' AND password = '$passwd'";  // make query
-        // $sql = "SELECT * FROM sample";
 
         // output
         // $stmt = $dbh->query($sql);
@@ -34,14 +31,9 @@ function output() {
             $line .= '<td>' . $row['age'] . '</td>';
             $line .= '<td>' . $row['password'] . '</td>';
             $html .= $line . '</tr>'; // $htmlに1行分追加
-            echo $line;
-            print_r($line);
         }
-        echo 'input:<br/>';
-        echo $html;
         $html .= '<table>' .$html. '</table>';
 
-        echo 'output:<br/>';
         echo $html;
 
         /*** Disconnect ***/
@@ -53,6 +45,7 @@ function output() {
 }
 ?>
 
+<!-- output.html -->
 <html lang='en'>
 
 <head>
@@ -71,9 +64,7 @@ function output() {
 <body>
     <h3>Search result</h3>
     <div class="form" style="margin: 5px; padding: 5px; border: solid 1px">
-        <?php
-        output();
-        ?>
+        <?php output(); ?>
     </div>
 </body>
 
