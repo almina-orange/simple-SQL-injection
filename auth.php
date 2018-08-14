@@ -5,6 +5,7 @@ Program:
 */
 
 function output() {
+    header('Content-type: text/html');
     try {
         /*** Connect by PHP Data Object (PDO) ***/
         $url = parse_url(getenv('DATABASE_URL'));  // using heroku env
@@ -23,6 +24,7 @@ function output() {
         //     print($result['id']);
         // }
         $html = '';
+        echo $html . '<br/>';
         foreach($dbh->query($sql) as $row) {
             $line = '';
             $line = '<tr>';
