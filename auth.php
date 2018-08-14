@@ -23,6 +23,17 @@ function output() {
         //     print($result['id']);
         // }
         $html = '';  // html sentence
+
+        // table header
+        $line = '';
+        $line = '<tr>';
+        $line .= '<td>' . 'id' . '</td>';
+        $line .= '<td>' . 'name' . '</td>';
+        $line .= '<td>' . 'age' . '</td>';
+        $line .= '<td>' . 'password' . '</td>';
+        $html .= $line . '</tr>'; // $htmlに1行分追加
+
+        // table contents from database
         foreach($dbh->query($sql) as $row) {
             $line = '';
             $line = '<tr>';
