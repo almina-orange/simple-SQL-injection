@@ -28,7 +28,11 @@ function output() {
         $html = '';
         foreach($dbh->query($sql) as $row) {
             print_r($row);
-            print("<br/>");
+            print('<br/>');
+            echo $row['id'] . '<br/>';
+            echo $row['name'] . '<br/>';
+            echo $row['age'] . '<br/>';
+            echo $row['password'] . '<br/>';
             $line = '<tr>';
             $line .= '<td>' . $row['id'] . '</td>';
             $line .= '<td>' . $row['name'] . '</td>';
@@ -38,7 +42,10 @@ function output() {
         }
         $html .= '<table>' .$html. '</table>';
 
+        echo 'output:<br/>';
+
         echo $html;
+        var_dump($html);
 
         /*** Disconnect ***/
         $dbh = null;
@@ -66,7 +73,7 @@ function output() {
 
 <body>
     <h3>Search result</h3>
-    <div class="form" style="margin: 5px; border: solid 1px">
+    <div class="form" style="margin: 5px; padding: 5px; border: solid 1px">
         <?php
         output();
         ?>
