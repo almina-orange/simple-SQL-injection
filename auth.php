@@ -14,8 +14,8 @@ try {
     $id = $_POST['user_id'];
     $passwd = $_POST['user_password'];
 
-    // $sql = "SELECT * FROM sample WHERE id = '$id' AND password = '$passwd'";  // make query
-    $sql = "SELECT * FROM sample";
+    $sql = "SELECT * FROM sample WHERE id = '$id' AND password = '$passwd'";  // make query
+    // $sql = "SELECT * FROM sample";
 
     // output
     // $stmt = $dbh->query($sql);
