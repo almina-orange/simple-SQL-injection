@@ -3,6 +3,7 @@ test for simple SQL injection
 
 ## Note
 - シンプルなSQLインジェクションの実験用ログインフォーラム
+- heroku app にデータベースを追加済み（PostgreSQL）
 - 以下のようなデータベースを想定する
 
 | id | name | age | password |
