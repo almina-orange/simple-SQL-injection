@@ -1,7 +1,10 @@
 <?php
-/* authentify program */
+/*
+Program:
+    authentify with database.
+*/
 
-$url = parse_url('postgres://mhlygpzzpamohg:e82927c4b3980cb3f000dd85ce8339dcb228a04840d7e70dbdcd37460a4692ba@ec2-54-235-94-36.compute-1.amazonaws.com:5432/d2vsbffa5cjkio');
+$url = parse_url(getenv('DATABASE_URL'));
 
 echo "> url parameters :\n";
 echo $url['host'], "\n";
