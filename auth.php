@@ -33,10 +33,10 @@ var_dump($sql);
 $stmt = $dbh->query($sql);
 var_dump($stmt);
 
-// $result = $stmt->fetch(PDO::FETCH_ASSOC);
-// print($result['id']);
-// print($result['name']);
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+print($result['id']);
+print($result['name']);
 
-// /*** Disconnect ***/
-// $dbh = null;
+/*** Disconnect ***/
+$dbh = null;
 ?>
