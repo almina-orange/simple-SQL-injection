@@ -10,7 +10,7 @@ $url = parse_url(getenv('DATABASE_URL'));  // using heroku env
 try {
     $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
     $dbh = new PDO($dsn, $url['user'], $url['pass']);  // connect using PDO
-    foreach($dbh->query('SELECT * from FOO') as $row) {
+    foreach($dbh->query('SELECT * from sample') as $row) {
         print_r($row);
     }
     $dbh = null;
