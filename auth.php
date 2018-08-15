@@ -55,3 +55,28 @@ function output() {
     }
 }
 ?>
+
+<!-- output.html -->
+<html lang='en'>
+
+<head>
+    <title>output.html</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: solid 1px;
+            padding: 0.5em;
+        }
+    </style>
+</haed>
+
+<body>
+    <h3>Search result</h3>
+    <div class="form" style="margin: 5px; padding: 5px;">
+        <?php output(); ?>
+    </div>
+</body>
+
+</html>
