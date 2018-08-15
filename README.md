@@ -3,15 +3,22 @@ test for simple SQL injection
 
 ## Note
 - シンプルなSQLインジェクションの実験用ログインフォーラム
-- heroku app にデータベースを追加済み（PostgreSQL）
-- 以下のようなデータベースを想定する
+- heroku app にデータベースを追加済み（PostgreSQL）であることを想定する
+- テーブル作成用スクリプト（`db_init.sql`）を作成済み
 
-| id | name | age | password |
-| --- | --- | --- | --- |
-| 1 | 山田太郎 | 28 | yamada |
-| 2 | 佐藤隆 | 36 | sato |
-| 3 | 斎藤達弘 | 46 | saito |
-| 4 | 桜井さつき | 22 | sakurai |
+    ```bash
+    # PostgreSQL のコンソール上でスクリプトを実行
+    $ \i db_init.sql
+    ```
+
+- 以下のようなデータベースが作成される
+
+    | id | name | age | password |
+    | --- | --- | --- | --- |
+    | 1 | 山田太郎 | 28 | yamada |
+    | 2 | 佐藤隆 | 36 | sato |
+    | 3 | 斎藤達弘 | 46 | saito |
+    | 4 | 桜井さつき | 22 | sakurai |
 
 ------
 

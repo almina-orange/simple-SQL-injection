@@ -17,7 +17,7 @@ function output() {
 
         $sql = "SELECT * FROM sample WHERE id = '$id' AND password = '$passwd'";  // make query
 
-        /*** output ***/
+        /*** output by HTML ***/
         // $stmt = $dbh->query($sql);
         // while($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
         //     print($result['id']);
